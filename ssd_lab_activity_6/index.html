@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Team Form</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h3>Team Form</h3>
+    <form action="" onsubmit="validateFormData()">
+        <label>Manager Name</label>
+        <input id= "mname" type="text" required="true"><br/>
+        <label>Group Mail</label>
+        <input id="email" type="email" required="true"><br/>
+        <label>Server username</label>
+        <div>
+            <input name="username" id="username" type="text" required="true" pattern="(?=.*\d)(?=.*[A-Z]).{2,}" ><br/> <!-- pattern="(?=.*\d)(?=.[A-Z]).{2,}"-->
+            <span id="usernamehandle"></span>
+        </div>
+        <label>Server password</label>
+        <input id="password" type="password" required> <br/>
+        <label>Confirm password</label>
+        <div>
+            <input id="cpassword" type="password" required> <br/>
+            <label>Team Lead</label>
+            <span id="pwdhandle"></span>
+        </div>
+        <select name="teamlead" id="teamlead">
+            <option value="Sachin">Sachin</option>
+            <option value="Rahul">Rahul</option>
+            <option value="Ram">Ram</option>
+            <option value="Sita">Sita</option>
+            <option value="Preeti">Preeti</option>
+        </select><br/>
+        <label>Team Members</label>
+        <div class="con">
+            <div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)" id="content1">
+                <p ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="dragtarget" value="Sachiin">Sachin</p>
+                <p ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="dragtarget" value="Rahul">Rahul</p>
+                <p ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="dragtarget" value="Ram">Ram</p>
+                <p ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="dragtarget" value="Sita">Sita</p>
+                <p ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="dragtarget" value="Preeti">Preeti</p>
+            </div>
+            <div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)" id="content2"></div>
+        </div>
+        <!-- <button id="submitbtn">Submit</button> -->
+        <input type="submit" id="submit">
+        
+    </form>
+    <script src="./script.js"></script>
+</body>
+</html>

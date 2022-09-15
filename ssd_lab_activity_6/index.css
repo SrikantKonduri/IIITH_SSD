@@ -1,0 +1,9 @@
+.droptarget{
+    border:1px solid blue;
+    width:50%;
+    padding:2px;
+}
+.con{
+    display:flex;
+
+}
